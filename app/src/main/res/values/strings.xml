@@ -1,3 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">gestor-comunidad</string>
+
+    <string name="login_title">Inicio de sesión</string>
+    <string name="login_subtitle">¡Un placer tenerte de vuelta!</string>
+    <string name="hint_usuario">Usuario</string>
+    <string name="hint_contrasena">Contraseña</string>
+    <string name="btn_iniciar_sesion">Iniciar sesión</string>
+    <string name="no_tienes_cuenta">¿No tienes cuenta?</string>
+    <string name="crear_cuenta">Crear cuenta</string>
+    <string name="o_separador">ó</string>
+    <string name="continuar_con">Continuar con</string>
+
+    <string name="register_title">Bienvenido</string>
+    <string name="register_subtitle">Ingresa tu información y deja que\nnosotros hagamos el resto</string>
+    <string name="hint_nombre">Nombre</string>
+    <string name="hint_apellido">Apellido</string>
+    <string name="hint_telefono">Télefono</string>
+    <string name="hint_correo">Correo</string>
+    <string name="hint_confirmar_contrasena">Confirmar contraseña</string>
+    <string name="btn_crear_cuenta">Crear cuenta</string>
+    <string name="btn_regresar">Regresar</string>
+
+    <string name="mi_perfil">Mi Perfil</string>
+    <string name="user_name_example">LUISA MARTINEZ</string>
+    <string name="user_email_example">luisa.martinez@gmail.com</string>
+    <string name="user_community_example">Comunidad Las Brisas</string>
+    <string name="sobre_mi">SOBRE MI</string>
+    <string name="about_me_example">texto de prueba </string>
+    <string name="mis_eventos">MIS EVENTOS</string>
+    <string name="creados">Creados (1)</string>
+    <string name="asistire">Asistiré</string>
+    <string name="event_title_example">Clase de Yoga</string>
+    <string name="event_time_example">10:00 AM - 11:00 AM</string>
+    <string name="event_location_example">Parque Central</string>
+    <string name="event_day_example">15</string>
+    <string name="event_month_example">NOV</string>
 </resources>

@@ -7,4 +7,30 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="green_primary">#4CAF50</color>
+    <color name="green_light">#81C784</color>
+    <color name="green_dark">#388E3C</color>
+    <color name="green_hint">#A5D6A7</color>
+    <color name="green_border">#C8E6C9</color>
+    <color name="green_bg_light">#F1F8E9</color>
+
+    <color name="purple_section">#7B1FA2</color>
+    <color name="orange_accent">#FF5722</color>
+    <color name="red_accent">#E53935</color>
+
+    <color name="text_dark">#212121</color>
+    <color name="text_medium">#616161</color>
+    <color name="text_light">#9E9E9E</color>
+    <color name="divider">#E0E0E0</color>
+    <color name="background_light">#FAFAFA</color>
+    <color name="card_background">#FFFFFF</color>
+
+    <color name="google_color">#DB4437</color>
+    <color name="facebook_color">#4267B2</color>
+    <color name="twitter_color">#1DA1F2</color>
+    <color name="github_color">#333333</color>
+
+    <color name="date_badge_green">#4CAF50</color>
+    <color name="event_eye_red">#E53935</color>
 </resources>
