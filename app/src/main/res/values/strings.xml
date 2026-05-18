@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">gestor-comunidad</string>
+    <string name="app_name">Gestor Comunidad</string>
 
     <string name="login_title">Inicio de sesión</string>
     <string name="login_subtitle">¡Un placer tenerte de vuelta!</string>
+    <string name="hint_correo_login">Correo electrónico</string>
     <string name="hint_usuario">Usuario</string>
     <string name="hint_contrasena">Contraseña</string>
     <string name="btn_iniciar_sesion">Iniciar sesión</string>
@@ -16,7 +17,7 @@
     <string name="register_subtitle">Ingresa tu información y deja que\nnosotros hagamos el resto</string>
     <string name="hint_nombre">Nombre</string>
     <string name="hint_apellido">Apellido</string>
-    <string name="hint_telefono">Télefono</string>
+    <string name="hint_telefono">Teléfono</string>
     <string name="hint_correo">Correo</string>
     <string name="hint_confirmar_contrasena">Confirmar contraseña</string>
     <string name="btn_crear_cuenta">Crear cuenta</string>
@@ -27,7 +28,7 @@
     <string name="user_email_example">luisa.martinez@gmail.com</string>
     <string name="user_community_example">Comunidad Las Brisas</string>
     <string name="sobre_mi">SOBRE MI</string>
-    <string name="about_me_example">texto de prueba </string>
+    <string name="about_me_example">texto de prueba</string>
     <string name="mis_eventos">MIS EVENTOS</string>
     <string name="creados">Creados (1)</string>
     <string name="asistire">Asistiré</string>
@@ -36,4 +37,21 @@
     <string name="event_location_example">Parque Central</string>
     <string name="event_day_example">15</string>
     <string name="event_month_example">NOV</string>
+
+    <string name="error_campo_vacio">Este campo es obligatorio</string>
+    <string name="error_correo_invalido">Ingresa un correo válido</string>
+    <string name="error_contrasena_corta">Mínimo 6 caracteres</string>
+    <string name="error_contrasenas_no_coinciden">Las contraseñas no coinciden</string>
+    <string name="error_login">Error al iniciar sesión: %s</string>
+    <string name="error_registro">Error al registrarse: %s</string>
+    <string name="error_google_signin">Error al iniciar sesión con Google</string>
+    <string name="error_cargar_perfil">Error al cargar los datos del perfil</string>
+    <string name="proximamente">Próximamente</string>
+    <string name="sin_nombre">Sin nombre</string>
+    <string name="sin_correo">Sin correo</string>
+    <string name="sin_comunidad">Sin comunidad</string>
+    <string name="sin_descripcion">Sin descripción</string>
+    <string name="cerrar_sesion">Cerrar sesión</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="menu_opciones">Opciones</string>
 </resources>
