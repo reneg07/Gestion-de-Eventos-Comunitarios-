@@ -31,11 +31,11 @@
 
 ## 🚀 Instalación
 
-1. Clona el repositorio.
-2. Ábrelo en Android Studio.
+1. Clonar el repositorio.
+2. Ábrirlo en Android Studio.
 3. Sincroniza Gradle.
 4. Configura Firebase con tu archivo `google-services.json`.
-5. Ejecuta la app en un emulador o dispositivo físico.
+5. Ejecutar la app en un emulador o dispositivo físico.
 
 ## 📱 Flujo principal
 
