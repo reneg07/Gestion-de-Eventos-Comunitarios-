@@ -68,6 +68,12 @@ Login -> Registro / Google -> Perfil -> Eventos -> Detalle / Crear / Asistir
 - Componentes Material
 - Interfaz limpia y orientada a comunidad
 
+## 🖼️ Mockups
+
+Los mockups del diseño de la aplicación están disponibles en Figma:
+
+[Ver mockups en Figma](https://www.figma.com/design/dLRI7j44pmoBsqVQt0N90L/Gesti%C3%B3n-de-Eventos?node-id=0-1&t=QaytYhCow77y14sw-1)
+
 ## 📄 Licencia
 
 Este proyecto está bajo la licencia [Creative Commons Attribution 4.0 International (CC BY 4.0)](LICENSE).
