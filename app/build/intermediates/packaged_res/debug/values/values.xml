@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background_light">#FAFAFA</color>
+    <color name="black">#FF000000</color>
+    <color name="card_background">#FFFFFF</color>
+    <color name="date_badge_green">#4CAF50</color>
+    <color name="divider">#E0E0E0</color>
+    <color name="event_eye_red">#E53935</color>
+    <color name="facebook_color">#4267B2</color>
+    <color name="github_color">#333333</color>
+    <color name="google_color">#DB4437</color>
+    <color name="green_bg_light">#F1F8E9</color>
+    <color name="green_border">#C8E6C9</color>
+    <color name="green_dark">#388E3C</color>
+    <color name="green_hint">#A5D6A7</color>
+    <color name="green_light">#81C784</color>
+    <color name="green_primary">#4CAF50</color>
+    <color name="orange_accent">#FF5722</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="purple_section">#7B1FA2</color>
+    <color name="red_accent">#E53935</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="text_dark">#212121</color>
+    <color name="text_light">#9E9E9E</color>
+    <color name="text_medium">#616161</color>
+    <color name="twitter_color">#1DA1F2</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="about_me_example">texto de prueba</string>
+    <string name="app_name">Gestor Comunidad</string>
+    <string name="asistire">Asistiré</string>
+    <string name="btn_crear_cuenta">Crear cuenta</string>
+    <string name="btn_iniciar_sesion">Iniciar sesión</string>
+    <string name="btn_regresar">Regresar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="cerrar_sesion">Cerrar sesión</string>
+    <string name="continuar_con">Continuar con</string>
+    <string name="creados">Creados (1)</string>
+    <string name="crear_cuenta">Crear cuenta</string>
+    <string name="default_web_client_id" translatable="false">447314886562-amogi971825loob1qe44o3nbceq6mp1u.apps.googleusercontent.com</string>
+    <string name="error_campo_vacio">Este campo es obligatorio</string>
+    <string name="error_cargar_perfil">Error al cargar los datos del perfil</string>
+    <string name="error_contrasena_corta">Mínimo 6 caracteres</string>
+    <string name="error_contrasenas_no_coinciden">Las contraseñas no coinciden</string>
+    <string name="error_correo_invalido">Ingresa un correo válido</string>
+    <string name="error_google_signin">Error al iniciar sesión con Google</string>
+    <string name="error_login">Error al iniciar sesión: %s</string>
+    <string name="error_registro">Error al registrarse: %s</string>
+    <string name="event_day_example">15</string>
+    <string name="event_location_example">Parque Central</string>
+    <string name="event_month_example">NOV</string>
+    <string name="event_time_example">10:00 AM - 11:00 AM</string>
+    <string name="event_title_example">Clase de Yoga</string>
+    <string name="gcm_defaultSenderId" translatable="false">447314886562</string>
+    <string name="google_api_key" translatable="false">AIzaSyDnE6LFoFmGohWApY8WzsvPIDxBJzRW7tw</string>
+    <string name="google_app_id" translatable="false">1:447314886562:android:2c30a417adf29e70547cfb</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDnE6LFoFmGohWApY8WzsvPIDxBJzRW7tw</string>
+    <string name="google_storage_bucket" translatable="false">gestor-comunitario-ebdd1.firebasestorage.app</string>
+    <string name="hint_apellido">Apellido</string>
+    <string name="hint_confirmar_contrasena">Confirmar contraseña</string>
+    <string name="hint_contrasena">Contraseña</string>
+    <string name="hint_correo">Correo</string>
+    <string name="hint_correo_login">Correo electrónico</string>
+    <string name="hint_nombre">Nombre</string>
+    <string name="hint_telefono">Teléfono</string>
+    <string name="hint_usuario">Usuario</string>
+    <string name="login_subtitle">¡Un placer tenerte de vuelta!</string>
+    <string name="login_title">Inicio de sesión</string>
+    <string name="menu_opciones">Opciones</string>
+    <string name="mi_perfil">Mi Perfil</string>
+    <string name="mis_eventos">MIS EVENTOS</string>
+    <string name="no_tienes_cuenta">¿No tienes cuenta?</string>
+    <string name="o_separador">ó</string>
+    <string name="project_id" translatable="false">gestor-comunitario-ebdd1</string>
+    <string name="proximamente">Próximamente</string>
+    <string name="register_subtitle">Ingresa tu información y deja que\nnosotros hagamos el resto</string>
+    <string name="register_title">Bienvenido</string>
+    <string name="sin_comunidad">Sin comunidad</string>
+    <string name="sin_correo">Sin correo</string>
+    <string name="sin_descripcion">Sin descripción</string>
+    <string name="sin_nombre">Sin nombre</string>
+    <string name="sobre_mi">SOBRE MI</string>
+    <string name="user_community_example">Comunidad Las Brisas</string>
+    <string name="user_email_example">luisa.martinez@gmail.com</string>
+    <string name="user_name_example">LUISA MARTINEZ</string>
+    <style name="Theme.Gestorcomunidad" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/green_primary</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/purple_section</item>
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+</resources>

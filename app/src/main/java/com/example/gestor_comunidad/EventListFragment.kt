@@ -1,4 +1,4 @@
-package com.tuapp.ui
+package com.example.gestor_comunidad
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,10 +10,8 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.tuapp.R
-import com.tuapp.adapter.EventAdapter
-import com.tuapp.model.Event
-import com.tuapp.viewmodel.EventViewModel
+import androidx.appcompat.widget.Toolbar
+import android.content.Intent
 
 class EventListFragment : Fragment() {
 
@@ -31,6 +29,11 @@ class EventListFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val toolbar = view.findViewById<Toolbar>(R.id.toolbar)
+        toolbar.setNavigationOnClickListener {
+            (activity as? EventActivity)?.openDrawer()
+        }
 
         progressBar = view.findViewById(R.id.progressBar)
 
@@ -68,20 +71,11 @@ class EventListFragment : Fragment() {
         val fragment = EventDetailFragment().apply {
             arguments = Bundle().apply {
                 putString("eventId", event.id)
-                putString("eventTitle", event.title)
-                putString("eventDay", event.day)
-                putString("eventMonth", event.month)
-                putString("eventStartTime", event.startTime)
-                putString("eventEndTime", event.endTime)
-                putString("eventLocation", event.location)
-                putString("eventDescription", event.description)
-                putString("eventOrganizer", event.organizerName)
-                putString("eventCategory", event.category)
-                putInt("eventAttendees", event.attendeesCount)
             }
         }
+
         parentFragmentManager.beginTransaction()
-            .replace(R.id.fragmentContainer, fragment)
+            .replace(R.id.eventFragmentContainer, fragment)
             .addToBackStack(null)
             .commit()
     }

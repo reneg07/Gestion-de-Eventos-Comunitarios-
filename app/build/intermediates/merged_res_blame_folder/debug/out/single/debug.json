@@ -1,0 +1,202 @@
+[
+    {
+        "merged": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-merged_res-38:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-main-40:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-merged_res-38:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-main-40:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-merged_res-38:\\drawable_ic_twitter_x.xml.flat",
+        "source": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-main-40:\\drawable\\ic_twitter_x.xml"
+    },
+    {
+        "merged": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-merged_res-38:\\layout_fragment_event_detail.xml.flat",
+        "source": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-main-40:\\layout\\fragment_event_detail.xml"
+    },
+    {
+        "merged": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-merged_res-38:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-main-40:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-merged_res-38:\\drawable_ic_facebook.xml.flat",
+        "source": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-main-40:\\drawable\\ic_facebook.xml"
+    },
+    {
+        "merged": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-merged_res-38:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-main-40:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-merged_res-38:\\menu_menu_drawer.xml.flat",
+        "source": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-main-40:\\menu\\menu_drawer.xml"
+    },
+    {
+        "merged": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-merged_res-38:\\drawable_bg_card_rounded.xml.flat",
+        "source": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-main-40:\\drawable\\bg_card_rounded.xml"
+    },
+    {
+        "merged": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-merged_res-38:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-main-40:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-merged_res-38:\\drawable_bg_input_field.xml.flat",
+        "source": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-main-40:\\drawable\\bg_input_field.xml"
+    },
+    {
+        "merged": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-merged_res-38:\\drawable_bg_tab_inactive.xml.flat",
+        "source": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-main-40:\\drawable\\bg_tab_inactive.xml"
+    },
+    {
+        "merged": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-merged_res-38:\\drawable_ic_github.xml.flat",
+        "source": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-main-40:\\drawable\\ic_github.xml"
+    },
+    {
+        "merged": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-merged_res-38:\\layout_activity_event.xml.flat",
+        "source": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-main-40:\\layout\\activity_event.xml"
+    },
+    {
+        "merged": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-merged_res-38:\\drawable_bg_avatar_green.xml.flat",
+        "source": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-main-40:\\drawable\\bg_avatar_green.xml"
+    },
+    {
+        "merged": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-merged_res-38:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-main-40:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-merged_res-38:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-main-40:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-merged_res-38:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-main-40:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-merged_res-38:\\layout_fragment_create_event.xml.flat",
+        "source": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-main-40:\\layout\\fragment_create_event.xml"
+    },
+    {
+        "merged": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-merged_res-38:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-main-40:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-merged_res-38:\\drawable_ic_google.xml.flat",
+        "source": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-main-40:\\drawable\\ic_google.xml"
+    },
+    {
+        "merged": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-merged_res-38:\\drawable_ic_person.xml.flat",
+        "source": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-main-40:\\drawable\\ic_person.xml"
+    },
+    {
+        "merged": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-merged_res-38:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-main-40:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-merged_res-38:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-main-40:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-merged_res-38:\\drawable_bg_date_badge.xml.flat",
+        "source": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-main-40:\\drawable\\bg_date_badge.xml"
+    },
+    {
+        "merged": "com.example.gestor_comunidad.app-merged_res-38:/layout_activity_profile.xml.flat",
+        "source": "com.example.gestor_comunidad.app-main-40:/layout/activity_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-merged_res-38:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-main-40:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-merged_res-38:\\layout_activity_profile.xml.flat",
+        "source": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-main-40:\\layout\\activity_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-merged_res-38:\\drawable_bg_button_green.xml.flat",
+        "source": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-main-40:\\drawable\\bg_button_green.xml"
+    },
+    {
+        "merged": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-merged_res-38:\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-main-40:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-merged_res-38:\\layout_dialog_event_review.xml.flat",
+        "source": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-main-40:\\layout\\dialog_event_review.xml"
+    },
+    {
+        "merged": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-merged_res-38:\\layout_activity_register.xml.flat",
+        "source": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-main-40:\\layout\\activity_register.xml"
+    },
+    {
+        "merged": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-merged_res-38:\\drawable_ic_email.xml.flat",
+        "source": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-main-40:\\drawable\\ic_email.xml"
+    },
+    {
+        "merged": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-merged_res-38:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-main-40:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-merged_res-38:\\drawable_ic_edit.xml.flat",
+        "source": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-main-40:\\drawable\\ic_edit.xml"
+    },
+    {
+        "merged": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-merged_res-38:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-main-40:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-merged_res-38:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-main-40:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-merged_res-38:\\layout_fragment_event_list.xml.flat",
+        "source": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-main-40:\\layout\\fragment_event_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-merged_res-38:\\drawable_bg_event_card.xml.flat",
+        "source": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-main-40:\\drawable\\bg_event_card.xml"
+    },
+    {
+        "merged": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-merged_res-38:\\drawable_ic_clock.xml.flat",
+        "source": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-main-40:\\drawable\\ic_clock.xml"
+    },
+    {
+        "merged": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-merged_res-38:\\drawable_ic_eye.xml.flat",
+        "source": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-main-40:\\drawable\\ic_eye.xml"
+    },
+    {
+        "merged": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-merged_res-38:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-main-40:\\drawable\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-merged_res-38:\\drawable_ic_location.xml.flat",
+        "source": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-main-40:\\drawable\\ic_location.xml"
+    },
+    {
+        "merged": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-merged_res-38:\\drawable_bg_tab_active.xml.flat",
+        "source": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-main-40:\\drawable\\bg_tab_active.xml"
+    },
+    {
+        "merged": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-merged_res-38:\\drawable_bg_social_circle.xml.flat",
+        "source": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-main-40:\\drawable\\bg_social_circle.xml"
+    },
+    {
+        "merged": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-merged_res-38:\\drawable_ic_divider_line.xml.flat",
+        "source": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-main-40:\\drawable\\ic_divider_line.xml"
+    },
+    {
+        "merged": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-merged_res-38:\\drawable_ic_calendar.xml.flat",
+        "source": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-main-40:\\drawable\\ic_calendar.xml"
+    },
+    {
+        "merged": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-merged_res-38:\\drawable_ic_menu.xml.flat",
+        "source": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-main-40:\\drawable\\ic_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-merged_res-38:\\layout_item_event_card.xml.flat",
+        "source": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-main-40:\\layout\\item_event_card.xml"
+    },
+    {
+        "merged": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-merged_res-38:\\drawable_ic_add.xml.flat",
+        "source": "C:\\Users\\Soporte\\.gradle\\daemon\\8.13\\com.example.gestor_comunidad.app-main-40:\\drawable\\ic_add.xml"
+    }
+]

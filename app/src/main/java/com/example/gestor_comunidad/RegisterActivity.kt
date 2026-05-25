@@ -129,7 +129,8 @@ class RegisterActivity : AppCompatActivity() {
     }
 
     private fun navigateToProfile() {
-        startActivity(Intent(this, ProfileActivity::class.java))
+        startActivity(Intent(this, EventActivity::class.java))
+        intent.putExtra(EventActivity.EXTRA_SCREEN, EventActivity.SCREEN_LIST)
         finishAffinity()
     }
 }

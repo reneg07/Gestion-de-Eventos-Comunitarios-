@@ -157,7 +157,9 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun navigateToProfile() {
-        startActivity(Intent(this, ProfileActivity::class.java))
+        val intent = Intent(this, EventActivity::class.java)
+        intent.putExtra(EventActivity.EXTRA_SCREEN, EventActivity.SCREEN_LIST)
+        startActivity(intent)
         finish()
     }
 

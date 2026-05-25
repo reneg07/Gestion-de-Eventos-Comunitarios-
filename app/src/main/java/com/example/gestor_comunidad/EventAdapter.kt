@@ -1,4 +1,4 @@
-package com.tuapp.adapter
+package com.example.gestor_comunidad
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,8 +6,6 @@ import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.tuapp.R
-import com.tuapp.model.Event
 
 class EventAdapter(
     private var events: List<Event>,

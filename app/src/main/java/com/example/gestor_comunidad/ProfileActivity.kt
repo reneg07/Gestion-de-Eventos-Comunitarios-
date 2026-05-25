@@ -14,6 +14,13 @@ import com.example.gestor_comunidad.data.repository.FirestoreRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import android.widget.Button
+import androidx.drawerlayout.widget.DrawerLayout
+import com.google.android.material.navigation.NavigationView
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.auth.FirebaseAuth
+import android.view.View
 
 class ProfileActivity : AppCompatActivity() {
 
@@ -26,13 +33,27 @@ class ProfileActivity : AppCompatActivity() {
     private val authRepository = AuthRepository()
     private val firestoreRepository = FirestoreRepository()
 
+    private lateinit var btnAddEvent: ImageButton
+    //private lateinit var btnViewEvent: ImageButton
+    private lateinit var btnCreados: Button
+    private lateinit var btnAsistire: Button
+
+    private lateinit var drawerLayout: DrawerLayout
+    private lateinit var navigationView: NavigationView
+    private lateinit var rvProfileEvents: RecyclerView
+    private lateinit var tvEmptyEvents: TextView
+    private lateinit var profileEventAdapter: EventAdapter
+    private val eventRepository = EventRepository()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
 
         initViews()
+        setupDrawer()
         setupListeners()
         loadUserData()
+        loadCreatedEvents()
     }
 
     override fun onStart() {
@@ -48,11 +69,49 @@ class ProfileActivity : AppCompatActivity() {
         tvUserCommunity = findViewById(R.id.tvUserCommunity)
         tvAboutMe = findViewById(R.id.tvAboutMe)
         btnMenu = findViewById(R.id.btnMenu)
+        btnAddEvent = findViewById(R.id.btnAddEvent)
+        //btnViewEvent = findViewById(R.id.btnViewEvent)
+        btnCreados = findViewById(R.id.btnCreados)
+        btnAsistire = findViewById(R.id.btnAsistire)
+        drawerLayout = findViewById(R.id.drawerLayout)
+        navigationView = findViewById(R.id.navigationView)
+
+        rvProfileEvents = findViewById(R.id.rvProfileEvents)
+        tvEmptyEvents = findViewById(R.id.tvEmptyEvents)
+
+        profileEventAdapter = EventAdapter(emptyList()) { event ->
+            val intent = Intent(this, EventActivity::class.java)
+            intent.putExtra(EventActivity.EXTRA_SCREEN, EventActivity.SCREEN_DETAIL)
+            intent.putExtra("eventId", event.id)
+            startActivity(intent)
+        }
+
+        rvProfileEvents.layoutManager = LinearLayoutManager(this)
+        rvProfileEvents.adapter = profileEventAdapter
     }
 
     private fun setupListeners() {
         btnMenu.setOnClickListener {
-            showLogoutDialog()
+            drawerLayout.open()
+        }
+        btnAddEvent.setOnClickListener {
+            val intent = Intent(this, EventActivity::class.java)
+            intent.putExtra(EventActivity.EXTRA_SCREEN, EventActivity.SCREEN_CREATE)
+            startActivity(intent)
+        }
+
+        /*btnViewEvent.setOnClickListener {
+            val intent = Intent(this, EventActivity::class.java)
+            intent.putExtra(EventActivity.EXTRA_SCREEN, EventActivity.SCREEN_LIST)
+            startActivity(intent)
+        }*/
+
+        btnCreados.setOnClickListener {
+            loadCreatedEvents()
+        }
+
+        btnAsistire.setOnClickListener {
+            loadAttendingEvents()
         }
     }
 
@@ -78,7 +137,7 @@ class ProfileActivity : AppCompatActivity() {
         tvUserName.text = fullName.ifEmpty { getString(R.string.sin_nombre) }
         tvUserEmail.text = user.correo.ifEmpty { getString(R.string.sin_correo) }
         tvUserCommunity.text = user.comunidad.ifEmpty { getString(R.string.sin_comunidad) }
-        tvAboutMe.text = user.sobreMi.ifEmpty { getString(R.string.sin_descripcion) }
+        tvAboutMe.text = "Aquí encontrarás tu historial de eventos creados y a los que asistirás..."
     }
 
     private fun showLogoutDialog() {
@@ -109,5 +168,72 @@ class ProfileActivity : AppCompatActivity() {
     private fun navigateToLogin() {
         startActivity(Intent(this, LoginActivity::class.java))
         finishAffinity()
+    }
+
+    private fun setupDrawer() {
+        navigationView.setNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.nav_profile -> {
+                    drawerLayout.close()
+                }
+
+                R.id.nav_events -> {
+                    val intent = Intent(this, EventActivity::class.java)
+                    intent.putExtra(EventActivity.EXTRA_SCREEN, EventActivity.SCREEN_LIST)
+                    startActivity(intent)
+                }
+
+                R.id.nav_create_event -> {
+                    val intent = Intent(this, EventActivity::class.java)
+                    intent.putExtra(EventActivity.EXTRA_SCREEN, EventActivity.SCREEN_CREATE)
+                    startActivity(intent)
+                }
+
+                R.id.nav_logout -> {
+                    logout()
+                }
+            }
+
+            drawerLayout.close()
+            true
+        }
+    }
+
+    private fun loadCreatedEvents() {
+        val uid = FirebaseAuth.getInstance().currentUser?.uid ?: return
+
+        btnCreados.setBackgroundResource(R.drawable.bg_tab_active)
+        btnAsistire.setBackgroundResource(R.drawable.bg_tab_inactive)
+
+        eventRepository.getEventsByOrganizer(
+            organizerId = uid,
+            onSuccess = { events ->
+                profileEventAdapter.updateList(events)
+                tvEmptyEvents.visibility = if (events.isEmpty()) View.VISIBLE else View.GONE
+                rvProfileEvents.visibility = if (events.isEmpty()) View.GONE else View.VISIBLE
+            },
+            onError = { msg ->
+                Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
+            }
+        )
+    }
+
+    private fun loadAttendingEvents() {
+        val uid = FirebaseAuth.getInstance().currentUser?.uid ?: return
+
+        btnCreados.setBackgroundResource(R.drawable.bg_tab_inactive)
+        btnAsistire.setBackgroundResource(R.drawable.bg_tab_active)
+
+        eventRepository.getEventsUserWillAttend(
+            userId = uid,
+            onSuccess = { events ->
+                profileEventAdapter.updateList(events)
+                tvEmptyEvents.visibility = if (events.isEmpty()) View.VISIBLE else View.GONE
+                rvProfileEvents.visibility = if (events.isEmpty()) View.GONE else View.VISIBLE
+            },
+            onError = { msg ->
+                Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
+            }
+        )
     }
 }

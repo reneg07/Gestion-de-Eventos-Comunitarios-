@@ -1,4 +1,4 @@
-package com.tuapp.model
+package com.example.gestor_comunidad
 
 data class Event(
     val id: String = "",

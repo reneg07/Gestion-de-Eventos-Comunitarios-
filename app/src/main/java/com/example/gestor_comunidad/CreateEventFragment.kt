@@ -1,4 +1,4 @@
-package com.tuapp.ui
+package com.example.gestor_comunidad
 
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
@@ -15,9 +15,13 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.FirebaseAuth
-import com.tuapp.R
-import com.tuapp.model.Event
-import com.tuapp.viewmodel.EventViewModel
+import androidx.appcompat.widget.Toolbar
+import com.example.gestor_comunidad.data.repository.FirestoreRepository
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+
+import com.example.gestor_comunidad.R
 import java.util.Calendar
 
 class CreateEventFragment : Fragment() {
@@ -30,6 +34,10 @@ class CreateEventFragment : Fragment() {
     private lateinit var actvCategory: AutoCompleteTextView
     private lateinit var etDescription: TextInputEditText
     private lateinit var progressBar: ProgressBar
+    private var isEditMode = false
+    private var eventId = ""
+    private var originalOrganizerId = ""
+    private var originalAttendeesCount = 0
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -42,6 +50,11 @@ class CreateEventFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val toolbar = view.findViewById<Toolbar>(R.id.toolbar)
+        toolbar.setNavigationOnClickListener {
+            (activity as? EventActivity)?.openDrawer()
+        }
+
         viewModel = ViewModelProvider(this)[EventViewModel::class.java]
 
         // Inicializar vistas
@@ -52,6 +65,30 @@ class CreateEventFragment : Fragment() {
         actvCategory  = view.findViewById(R.id.actvCategory)
         etDescription = view.findViewById(R.id.etDescription)
         progressBar   = view.findViewById(R.id.progressBar)
+        isEditMode = arguments?.getBoolean("isEditMode") ?: false
+        eventId = arguments?.getString("eventId") ?: ""
+        originalOrganizerId = arguments?.getString("eventOrganizerId") ?: ""
+        originalAttendeesCount = arguments?.getInt("eventAttendees") ?: 0
+
+        if (isEditMode) {
+            toolbar.title = "Editar Evento"
+            view.findViewById<Button>(R.id.btnCreateEvent).text = "Actualizar evento"
+
+            val day = arguments?.getString("eventDay") ?: ""
+            val month = arguments?.getString("eventMonth") ?: ""
+            val date = if (day.isNotEmpty() && month.isNotEmpty()) {
+                "$day/${monthToNumber(month)}/2026"
+            } else {
+                ""
+            }
+
+            etName.setText(arguments?.getString("eventTitle") ?: "")
+            etPlace.setText(arguments?.getString("eventLocation") ?: "")
+            etDate.setText(date)
+            etTime.setText(arguments?.getString("eventStartTime") ?: "")
+            etDescription.setText(arguments?.getString("eventDescription") ?: "")
+            actvCategory.setText(arguments?.getString("eventCategory") ?: "", false)
+        }
 
         // Dropdown categorías
         val categories = listOf("Deportes", "Cultura", "Educación", "Salud", "Recreación")
@@ -85,7 +122,10 @@ class CreateEventFragment : Fragment() {
         // Observar éxito → regresar
         viewModel.success.observe(viewLifecycleOwner) { msg ->
             Toast.makeText(requireContext(), msg, Toast.LENGTH_SHORT).show()
-            parentFragmentManager.popBackStack()
+
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.eventFragmentContainer, EventListFragment())
+                .commit()
         }
 
         // Observar error
@@ -96,13 +136,19 @@ class CreateEventFragment : Fragment() {
         // Botón Crear evento → guardar en Firestore
         view.findViewById<Button>(R.id.btnCreateEvent).setOnClickListener {
             if (validateFields()) {
-                saveEventToFirestore()
+                if (isEditMode) {
+                    updateEventInFirestore()
+                } else {
+                    saveEventToFirestore()
+                }
             }
         }
 
         // Botón Regresar
         view.findViewById<Button>(R.id.btnBack).setOnClickListener {
-            parentFragmentManager.popBackStack()
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.eventFragmentContainer, EventListFragment())
+                .commit()
         }
     }
 
@@ -127,12 +173,44 @@ class CreateEventFragment : Fragment() {
     }
 
     private fun saveEventToFirestore() {
-        // Obtener usuario actual de Firebase Auth
-        val currentUser = FirebaseAuth.getInstance().currentUser
-        val organizerId = currentUser?.uid ?: ""
-        val organizerName = currentUser?.displayName ?: "Organizador"
+        val currentUser = FirebaseAuth.getInstance().currentUser ?: return
+        val organizerId = currentUser.uid
 
-        // Parsear día y mes de la fecha
+        val dateParts = etDate.text.toString().split("/")
+        val day = dateParts.getOrNull(0) ?: ""
+        val monthNum = dateParts.getOrNull(1)?.toIntOrNull() ?: 1
+        val months = listOf("ENE","FEB","MAR","ABR","MAY","JUN","JUL","AGO","SEP","OCT","NOV","DIC")
+        val month = months.getOrElse(monthNum - 1) { "ENE" }
+
+        CoroutineScope(Dispatchers.Main).launch {
+            val result = FirestoreRepository().getUser(organizerId)
+
+            result.onSuccess { user ->
+                val organizerName = "${user.nombre} ${user.apellido}".trim()
+                    .ifEmpty { user.correo }
+
+                val event = Event(
+                    title = etName.text.toString().trim(),
+                    description = etDescription.text.toString().trim(),
+                    day = day,
+                    month = month,
+                    startTime = etTime.text.toString(),
+                    endTime = "",
+                    location = etPlace.text.toString().trim(),
+                    organizerId = organizerId,
+                    organizerName = organizerName,
+                    category = actvCategory.text.toString(),
+                    attendeesCount = 0
+                )
+
+                viewModel.createEvent(event)
+            }
+        }
+    }
+
+    private fun updateEventInFirestore() {
+        val currentUser = FirebaseAuth.getInstance().currentUser
+
         val dateParts = etDate.text.toString().split("/")
         val day = dateParts.getOrNull(0) ?: ""
         val monthNum = dateParts.getOrNull(1)?.toIntOrNull() ?: 1
@@ -140,20 +218,43 @@ class CreateEventFragment : Fragment() {
         val month = months.getOrElse(monthNum - 1) { "ENE" }
 
         val event = Event(
-            title         = etName.text.toString().trim(),
-            description   = etDescription.text.toString().trim(),
-            day           = day,
-            month         = month,
-            startTime     = etTime.text.toString(),
-            endTime       = "",
-            location      = etPlace.text.toString().trim(),
-            organizerId   = organizerId,
-            organizerName = organizerName,
-            category      = actvCategory.text.toString(),
-            attendeesCount = 0
+            id = eventId,
+            title = etName.text.toString().trim(),
+            description = etDescription.text.toString().trim(),
+            day = day,
+            month = month,
+            startTime = etTime.text.toString(),
+            endTime = "",
+            location = etPlace.text.toString().trim(),
+            organizerId = originalOrganizerId.ifEmpty { currentUser?.uid ?: "" },
+            organizerName = currentUser?.displayName ?: "Organizador",
+            category = actvCategory.text.toString(),
+            attendeesCount = originalAttendeesCount
         )
 
-        // Guardar en Firestore
-        viewModel.createEvent(event)
+        viewModel.updateEvent(event)
+    }
+
+    private fun monthToNumber(month: String): String {
+        return when (month.uppercase()) {
+            "ENE" -> "1"
+            "FEB" -> "2"
+            "MAR" -> "3"
+            "ABR" -> "4"
+            "MAY" -> "5"
+            "JUN" -> "6"
+            "JUL" -> "7"
+            "AGO" -> "8"
+            "SEP" -> "9"
+            "OCT" -> "10"
+            "NOV" -> "11"
+            "DIC" -> "12"
+            else -> "1"
+        }
+    }
+    private fun goToEventList() {
+        parentFragmentManager.beginTransaction()
+            .replace(R.id.eventFragmentContainer, EventListFragment())
+            .commit()
     }
 }

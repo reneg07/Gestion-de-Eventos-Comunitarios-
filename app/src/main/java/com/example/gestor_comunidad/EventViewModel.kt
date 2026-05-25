@@ -1,10 +1,8 @@
-package com.tuapp.viewmodel
+package com.example.gestor_comunidad
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.tuapp.model.Event
-import com.tuapp.repository.EventRepository
 
 class EventViewModel : ViewModel() {
 
