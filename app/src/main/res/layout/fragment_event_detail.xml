@@ -159,6 +159,17 @@
                 android:textStyle="bold"
                 android:layout_marginBottom="12dp" />
 
+            <TextView
+                android:id="@+id/tvAttendeesList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lista de asistentes"
+                android:textSize="14sp"
+                android:textColor="#212121"
+                android:padding="10dp"
+                android:background="#EEEEEE"
+                android:layout_marginBottom="16dp"/>
+
             <!-- Botón Unirme -->
             <Button
                 android:id="@+id/btnJoin"
@@ -169,6 +180,19 @@
                 android:textColor="#FFFFFF"
                 android:textStyle="bold"
                 android:layout_gravity="end"
+                android:paddingHorizontal="24dp" />
+
+            <!-- Botón Cancelar asistencia -->
+            <Button
+                android:id="@+id/btnCancelJoin"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="Cancelar asistencia"
+                android:backgroundTint="#F44336"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:layout_gravity="end"
+                android:layout_marginTop="10dp"
                 android:paddingHorizontal="24dp" />
 
         </LinearLayout>

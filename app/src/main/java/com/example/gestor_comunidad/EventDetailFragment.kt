@@ -60,6 +60,11 @@ class EventDetailFragment : Fragment() {
         view.findViewById<Button>(R.id.btnJoin).setOnClickListener {
             joinEvent(eventId)
         }
+        loadAttendees(eventId)
+
+        view.findViewById<Button>(R.id.btnCancelJoin).setOnClickListener {
+            cancelJoinEvent(eventId)
+        }
 
         // Observar errores
         viewModel.error.observe(viewLifecycleOwner) { msg ->
@@ -90,9 +95,68 @@ class EventDetailFragment : Fragment() {
             .set(attendeeData)
             .addOnSuccessListener {
                 Toast.makeText(requireContext(), "¡Te uniste al evento!", Toast.LENGTH_SHORT).show()
+                loadAttendees(eventId)
             }
             .addOnFailureListener {
                 Toast.makeText(requireContext(), "Error al unirse al evento", Toast.LENGTH_SHORT).show()
+            }
+    }
+
+    private fun cancelJoinEvent(eventId: String) {
+
+        val currentUser = FirebaseAuth.getInstance().currentUser
+
+        if (currentUser == null) {
+            Toast.makeText(requireContext(), "Debes iniciar sesión", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        val db = FirebaseFirestore.getInstance()
+
+        db.collection("events")
+            .document(eventId)
+            .collection("attendees")
+            .document(currentUser.uid)
+            .delete()
+            .addOnSuccessListener {
+                Toast.makeText(requireContext(), "Asistencia cancelada", Toast.LENGTH_SHORT).show()
+                loadAttendees(eventId)
+            }
+            .addOnFailureListener {
+                Toast.makeText(requireContext(), "Error al cancelar asistencia", Toast.LENGTH_SHORT)
+                    .show()
+            }
+    }
+
+    private fun loadAttendees(eventId: String) {
+
+        val db = FirebaseFirestore.getInstance()
+
+        db.collection("events")
+            .document(eventId)
+            .collection("attendees")
+            .get()
+            .addOnSuccessListener { documents ->
+
+                val attendeesList = StringBuilder()
+
+                for (document in documents) {
+
+                    val userName = document.getString("userName")
+
+                    attendeesList.append("• $userName\n")
+                }
+
+                view?.findViewById<TextView>(R.id.tvAttendeesList)?.text =
+                    attendeesList.toString()
+            }
+            .addOnFailureListener {
+
+                Toast.makeText(
+                    requireContext(),
+                    "Error al cargar asistentes",
+                    Toast.LENGTH_SHORT
+                ).show()
             }
     }
 }
